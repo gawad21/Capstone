@@ -1,2 +1,0 @@
-print("FUCKOFF")
-print("SORRY")

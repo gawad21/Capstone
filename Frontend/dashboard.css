@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  background-color: aqua;
+  background-color: #66d9e8;
   /* position: fixed; */
   display: flex;
   width: 100%;
@@ -18,13 +18,16 @@ header {
   padding: 20px 40px;
   justify-content: space-between;
 }
-.left-header {
+.right-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 nav {
-  margin-right: 50px;
+  margin-right: 40px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 nav a:link {
   color: #444;
@@ -37,19 +40,36 @@ nav a:active {
 }
 a:hover {
   color: green;
-  font-weight: bold;
 }
 nav a {
   color: red;
 }
 
+.settings-icon {
+  color: #444;
+}
+.settings-button {
+  text-decoration: none;
+}
+.settings-button:hover {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+}
 .logout {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #0b7285;
+  padding: 8px 20px;
+  border-radius: 14px;
+  box-shadow: 0 0 25px 1px #676767;
+  border: 0;
 }
 .logout:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #0c8599;
+  color: #99e9f2;
+  box-shadow: 0 0 20px 1px #c5f6fa;
 }
 
 /* CSS GRID */
@@ -63,7 +83,7 @@ nav a {
 }
 
 .status-bar {
-  background-color: blue;
+  background-color: #0b7285;
   order: -1;
   padding: 0 10px;
 }
@@ -87,6 +107,9 @@ nav a {
 
 .status-bar-alarm {
   background-color: red;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .status-bar-leaves {
@@ -106,8 +129,16 @@ nav a {
 }
 .timeline-header {
   display: flex;
+  color: #fff;
   font-size: 20px;
-  background-color: cyan;
+  background-color: #0b7285;
   justify-content: center;
   padding: 6px 0;
+  letter-spacing: 1px;
+}
+.timeline-alerts {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }

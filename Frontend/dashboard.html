@@ -10,16 +10,44 @@
   <body>
     <header>
       <h1>Aquaspecta</h1>
-      <div class="left-header">
+      <div class="right-header">
         <nav>
-          <a href="#" class="">Settings</a>
+          <ion-icon class="settings-icon" name="settings-outline"></ion-icon>
+          <a href="#" class="settings-button">Settings</a>
         </nav>
-        <button class="logout">Logout</button>
+        <button class="logout" type="button">LOGOUT</button>
       </div>
     </header>
     <div class="main-body">
       <div class="status-bar">
-        <p class="status-bar-alarm">ALARM PLACEHOLDER</p>
+        <p class="status-bar-alarm">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#444"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none"></rect>
+            <path
+              d="M56.2,104a71.9,71.9,0,0,1,72.3-72c39.6.3,71.3,33.2,71.3,72.9V112c0,35.8,7.5,56.6,14.1,68a8,8,0,0,1-6.9,12H49a8,8,0,0,1-6.9-12c6.6-11.4,14.1-32.2,14.1-68Z"
+              fill="none"
+              stroke="#444"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></path>
+            <path
+              d="M96,192v8a32,32,0,0,0,64,0v-8"
+              fill="none"
+              stroke="#444"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></path>
+          </svg>
+          ALARM
+        </p>
         <p class="status-bar-leaves">LEAF % PLACEHOLDER</p>
       </div>
       <div class="livestream">
@@ -31,9 +59,19 @@
       </div>
       <div class="timeline">
         <p class="timeline-header">TIMELINE</p>
-        <p>3:05pm: Drowning detected</p>
-        <p>1:37pm: Leaves at 100%</p>
+        <div class="timeline-alerts">
+          <p>3:05pm: Drowning detected</p>
+          <p>1:37pm: Leaves at 100%</p>
+        </div>
       </div>
     </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

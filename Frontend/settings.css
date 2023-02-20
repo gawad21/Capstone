@@ -75,9 +75,15 @@ nav a {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  align-items: flex-start;
 }
 
 .notification-on-off {
   display: flex;
   justify-content: space-between;
+  align-self: stretch;
+}
+
+.button-password-change {
+  flex-shrink: 1;
 }

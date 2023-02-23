@@ -58,7 +58,7 @@ nav a {
 button {
   cursor: pointer;
 }
-.logout {
+.button-logout {
   background-color: #fff;
   color: #0b7285;
   padding: 8px 20px;
@@ -66,7 +66,7 @@ button {
   box-shadow: 0 0 25px 1px #676767;
   border: 0;
 }
-.logout:hover {
+.button-logout:hover {
   background-color: #0c8599;
   color: #99e9f2;
   box-shadow: 0 0 20px 1px #c5f6fa;
@@ -78,22 +78,26 @@ button {
   display: grid;
   grid-template-columns: 400px 200px;
   grid-template-rows: 1fr 200px;
-  gap: 10px;
   justify-content: center;
 }
 
 .status-bar {
   background-color: #0b7285;
   order: -1;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 .livestream {
-  background-color: green;
+  background-color: #99e9f2;
   order: 1;
 }
 .timeline {
-  background-color: yellow;
+  background-color: #99e9f2;
   grid-row: span 2;
+  margin-left: 20px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 /* FLEX BOX WITHIN GRID ITEMS */
@@ -103,22 +107,45 @@ button {
   justify-content: space-between;
   align-items: center;
   height: 35px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
 }
 
 .status-bar-alarm {
-  background-color: red;
   display: flex;
   align-items: center;
   gap: 5px;
 }
+.ph-bell-fill {
+  color: #fff;
+  font-size: 1.5em;
+  filter: drop-shadow(3px 3px 3px rgb(0 0 0 / 0.8));
+}
+.button-alarm {
+  background-color: #fff;
+  font-size: 12px;
+  color: #0b7285;
+  padding: 4px 10px;
+  border-radius: 10px;
+  box-shadow: 3px 5px 5px rgb(0 0 0 / 0.4);
+  border: 0;
+}
+.button-alarm:hover {
+  /* background-color: #0c8599; */
+  /* color: #99e9f2; */
+  box-shadow: 0 0 10px 2px #c5f5fac3;
+}
 
 .status-bar-leaves {
-  background-color: orange;
+  font-size: 16px;
+  color: #fff;
 }
 .livestream {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 .timeline {
@@ -135,6 +162,8 @@ button {
   justify-content: center;
   padding: 6px 0;
   letter-spacing: 1px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
 }
 .timeline-alerts {
   padding: 0 10px;

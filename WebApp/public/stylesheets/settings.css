@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  background-color: aqua;
+  background-color: #66d9e8;
   /* position: fixed; */
   display: flex;
   width: 100%;
@@ -43,13 +43,21 @@ nav a {
   color: red;
 }
 
-.logout {
-  background-color: #000;
-  color: #fff;
+button {
+  cursor: pointer;
 }
-.logout:hover {
+.button-logout {
   background-color: #fff;
-  color: #000;
+  color: #0b7285;
+  padding: 8px 20px;
+  border-radius: 14px;
+  box-shadow: 0 0 12px 0.1px #676767;
+  border: 0;
+}
+.button-logout:hover {
+  background-color: #0c8599;
+  color: #99e9f2;
+  box-shadow: 0 0 20px 1px #c5f6fa;
 }
 
 .main-body {
@@ -61,7 +69,7 @@ nav a {
 .settings-navigation {
   width: 150px;
   padding: 10px 10px;
-  background-color: yellow;
+  background-color: #e3fafc;
   font-size: 14px;
   display: flex;
   flex-direction: column;
@@ -71,7 +79,7 @@ nav a {
 .settings-content {
   width: 450px;
   padding: 10px 10px;
-  background-color: orange;
+  background-color: #e3fafc;
   display: flex;
   flex-direction: column;
   gap: 30px;

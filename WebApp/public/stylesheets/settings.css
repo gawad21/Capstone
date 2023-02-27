@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  color: #444;
+  position: relative;
+}
+
+header {
+  background-color: aqua;
+  /* position: fixed; */
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 20px 40px;
+  justify-content: space-between;
+}
+.left-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav {
+  margin-right: 50px;
+}
+nav a:link {
+  color: #444;
+}
+nav a:visited {
+  color: #444;
+}
+nav a:active {
+  color: red;
+}
+a:hover {
+  color: green;
+  font-weight: bold;
+}
+nav a {
+  color: red;
+}
+
+.logout {
+  background-color: #000;
+  color: #fff;
+}
+.logout:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.main-body {
+  margin: 50px 30px;
+  display: flex;
+  gap: 50px;
+}
+
+.settings-navigation {
+  width: 150px;
+  padding: 10px 10px;
+  background-color: yellow;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.settings-content {
+  width: 450px;
+  padding: 10px 10px;
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.notification-on-off {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+.button-password-change {
+  flex-shrink: 1;
+}

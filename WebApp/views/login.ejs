@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <main id="main-holder">
+        <h1 id="login-header">Login</h1>
+        
+        <form id="login-form" action="/login" method="POST">
+          <input type="text" name="Username" id="username-field" class="login-form-field" placeholder="Username" required>
+          <input type="password" name="Password" id="password-field" class="login-form-field" placeholder="Password" required>
+          <button type="submit" name="Login" id="login-form-submit">Login</button>
+         <% if(invalid){ %>
+            <br>
+            <b id="invalid-login">Invalid username or password. Please try again</b>
+         <% } %> 
+        </form>
+      </main>
+  </body>
+
+</html>

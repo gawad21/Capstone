@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='stylesheet' href='/stylesheets/settings.css' />
+   <!-- <meta http-equiv="refresh" content="10"> -->
+    <title>Settings</title>
+  </head>
+  <body>
+    <header>
+      <h1>Aquaspecta</h1>
+      <div class="left-header">
+        <nav>
+          <a href="/dashboard" class=""><button>Back to dashboard</button></a>
+        </nav>
+        <a href="/"><button class="logout">Logout</button></a>
+      
+      </div>
+    </header>
+    <p>
+      This page will be designed better later, everything is just here as
+      placeholders for now.
+    </p>
+    <div class="main-body">
+      <div class="settings-navigation">
+        <p>Account information</p>
+        <p>Notifications</p>
+        <p>Alarm</p>
+        <p>Video</p>
+      </div>
+      <div class="settings-content">
+        <p>Username: <%=username%></p>
+        <p>Password: *****</p>
+        <p>Button to Change Password Here</p>
+        <div class="notification-on-off">
+          <p>Notification for leaves: </p>
+          <div class="on-off">
+          <% if(leaves){ %>
+            <form action="/dashboard/settings/leaf" method="POST">
+            <p>ON 
+            <button class="on-off" id="button-leaves">Turn OFF</button>
+            </p>
+            </form>
+          <% } else { %>
+            <form action="/dashboard/settings/leaf" method="POST">
+            <p>OFF 
+            <button class="on-off" id="button-leaves">Turn ON</button>
+            </p>
+            </form>
+          <% } %>
+          </div>
+        </div>
+        <div class="notification-on-off">
+          <p>Notification for distress:</p>
+          <div class="on-off">
+            <% if(distress){ %>
+              <form action="/dashboard/settings/distress" method="POST">
+              <p>ON 
+              <button class="on-off" id="button-distress">Turn OFF</button>
+              </p>
+              </form>
+            <% } else { %>
+              <form action="/dashboard/settings/distress" method="POST">
+              <p>OFF 
+              <button class="on-off" id="button-distress">Turn ON</button>
+              </p>
+              </form>
+            <% } %>
+          </div>
+        </div>
+        <div class="notification-on-off">
+          <p>Notification for drowning:</p>
+          <div class="on-off">
+            <% if(drowning){ %>
+              <form action="/dashboard/settings/drown" method="POST">
+              <p>ON 
+              <button class="on-off" id="button-drown">Turn OFF</button>
+              </p>
+              </form>
+            <% } else { %>
+              <form action="/dashboard/settings/drown" method="POST">
+              <p>OFF 
+              <button class="on-off" id="button-drown">Turn ON</button>
+              </p>
+              </form>
+            <% } %>
+          </div>
+        </div>
+        <div class="notification-on-off">
+          <p>Alarm Sound:</p>
+          <div class="on-off">
+            <% if(alarm){ %>
+              <form action="/dashboard/settings/alarm" method="POST">
+              <p>Enabled 
+              <button class="on-off" id="button-alarm">Disable</button>
+              </p>
+              </form>
+            <% } else { %>
+              <form action="/dashboard/settings/alarm" method="POST">
+              <p>Disabled 
+              <button class="on-off" id="button-alarm">Enable</button>
+              </p>
+              </form>
+            <% } %>
+          </div>
+        </div>
+        <p>Store 24hrs of video footage</p>
+      </div>
+    </div>
+  </body>
+</html>

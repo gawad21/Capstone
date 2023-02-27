@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='stylesheet' href='/stylesheets/landing.css' />
+    <title>Aquaspecta</title>
+  </head>
+  <body>
+    <div class="main-grid">
+      <header>
+        <div class="left-header">
+          <h1>Aquaspecta</h1>
+
+          <nav>
+            <a href="#first-grid" class="">Buy Now</a>
+            <a href="#second-grid">How it works</a>
+            <a href="#third-grid">Features</a>
+          </nav>
+        </div>
+        <button class="login" type="button" id="sign-in">Sign in</button> 
+      </header>
+      <div class="first-grid" id="first-grid">
+        Slogan on swimming safety
+        <img src="/images/photo1.jpg" width="100" height="auto" />
+      </div>
+      <div class="second-grid" id="second-grid">
+        <img src="/images/photo2.jpg" width="100" height="auto" />
+        How our product works
+      </div>
+      <div class="third-grid" id="third-grid">
+        Slogan on swimming safety
+        <img src="/images/photo1.jpg" width="100" height="auto" />
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const btn = document.getElementById('sign-in')
+    btn.onclick = ()=> location.assign('/login')
+  </script>
+
+</html>

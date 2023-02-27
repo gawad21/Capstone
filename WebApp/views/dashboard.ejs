@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='/stylesheets/dashboard.css' rel='stylesheet' />
+    <title>Dashboard</title>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Aquaspecta</h1>
+      <div class="right-header">
+        <nav>
+          <ion-icon class="settings-icon" name="settings-outline"></ion-icon>
+          <button class="settings-button" type="button" id="go-setting">Settings</button>
+        </nav>
+        <button class="button-logout" type="button" id="logout">LOGOUT</button>
+      </div>
+    </header>
+    <div class="main-body">
+      <div class="status-bar">
+        <div class="status-bar-alarm">
+          <i class="ph-bell-fill"></i>
+          <form action="/dashboard/alarm-off-Button-pushed", method="POST">
+            <button class="button-alarm" name="alarm-off">TURN OFF ALARM</button> 
+          </form>
+        </div>
+        <p class="status-bar-leaves">Leaf Coverage: 15%</p>
+      </div>
+      <div class="livestream">
+        <img
+          src="/images/livestream-placeholder.jpg"
+          width="250"
+          height="auto"
+        />
+      </div>
+      <div class="timeline">
+        <p class="timeline-header">TIMELINE</p>
+        <div class="timeline-alerts">
+          <p>3:05pm: Drowning detected</p>
+          <p>1:37pm: Leaves at 100%</p>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      const btnSetting = document.getElementById('go-setting')
+      const btnLogout = document.getElementById('logout')
+    
+      btnSetting.onclick = ()=> location.assign('/dashboard/settings')
+      btnLogout.onclick = ()=> location.assign('/') //goes back to landing page
+      //btnLogout.onclick = ()=> history.back() //goes back to login page
+    </script>
+  </body>
+</html>

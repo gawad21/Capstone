@@ -27,7 +27,7 @@
             <button class="button-alarm" name="alarm-off">TURN OFF ALARM</button> 
           </form>
         </div>
-        <p class="status-bar-leaves">Leaf Coverage: 15%</p>
+        <p class="status-bar-leaves" id="status-bar-leaves"> </p>
       </div>
       <div class="livestream">
         <img
@@ -38,9 +38,8 @@
       </div>
       <div class="timeline">
         <p class="timeline-header">TIMELINE</p>
-        <div class="timeline-alerts">
-          <p>3:05pm: Drowning detected</p>
-          <p>1:37pm: Leaves at 100%</p>
+        <div class="timeline-alerts" id = "timeline-alerts">
+
         </div>
       </div>
     </div>
@@ -55,10 +54,52 @@
     <script>
       const btnSetting = document.getElementById('go-setting')
       const btnLogout = document.getElementById('logout')
-    
       btnSetting.onclick = ()=> location.assign('/dashboard/settings')
       btnLogout.onclick = ()=> location.assign('/') //goes back to landing page
-      //btnLogout.onclick = ()=> history.back() //goes back to login page
+      //btnLogout.onclick = ()=> history.back() //goes back to login page      
+    </script>
+    <script type="module">
+
+      const url = new URL(location.href); 
+      const leafStatBar = document.getElementById("status-bar-leaves");
+      const notifBar = document.getElementById("timeline-alerts");
+
+      let currentDrown = false;
+      let currentDistress = false;
+
+      function statusUpdate() {
+          fetch(url + '/update', {
+            method: 'GET'
+          }).then(res => res.json())
+            .then(res => {
+              console.log(res);
+              var  leafStatus = (res.leafStatus)*100;
+              leafStatBar.innerText = "Leaf Coverage: " + leafStatus + "%";
+
+              if (res.drownStatus && !currentDrown){
+                const notif = document.createElement('p');
+                let time = new Date().toLocaleTimeString();
+                notif.innerText = time + " Someone is drowning!!!";
+                notifBar.appendChild(notif);
+                console.log('here drown');
+              };
+              if (res.distStatus && !currentDistress){
+                const notif = document.createElement('p');
+                let time = new Date().toLocaleTimeString();
+                notif.innerText = time + " Someone is distressed!!!";
+                notifBar.appendChild(notif);
+                console.log('here dist');
+              };
+
+              currentDrown = res.drownStatus;
+              currentDistress = res.distStatus;
+              console.log(currentDistress);
+              console.log(currentDrown);
+              
+            });    
+      };
+      setInterval(statusUpdate, 5000);
+      
     </script>
   </body>
 </html>

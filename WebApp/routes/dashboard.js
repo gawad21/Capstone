@@ -5,6 +5,8 @@ const { db } = require('../database.js')
 
 const settingRef = db.collection('user1').doc('settings'); //gets reference to a document in the database
 const userRef = db.collection('user1').doc('user-info'); 
+const statRef = db.collection('user1').doc('status-flags'); 
+
 
 /* GET dashboard page. */
 router.get('/', function(req, res, next) {
@@ -15,6 +17,22 @@ router.post('/alarm-off-Button-pushed', async function(req, res, next) {
   await settingRef.update({TurnAlarmOFF: true}) ;
   res.status(200).redirect('/dashboard');
 });
+
+router.get('/update', async function(req, res, next) {
+  var leafStatus;
+  var drownStatus;
+  var distStatus;
+  var alarmStatus;
+
+  await statRef.get().then((doc) => {
+    leafStatus = doc.data().LeafPercent;
+    drownStatus = doc.data().isDrowning;
+    distStatus = doc.data().inDistress;
+    alarmStatus = doc.data().alarmON;
+    });
+  res.send({leafStatus: leafStatus, drownStatus: drownStatus, distStatus: distStatus, alarmStatus: alarmStatus});
+  });
+
 
 /* GET settings page. */
 router.get('/settings', async function(req, res, next) {

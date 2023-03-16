@@ -1,7 +1,7 @@
 #classes = [2, 2, 2, 0]
 #confidence = [0.4, 0.6, 0.7,0.7]
 def filterclasses(classes,confidence):
-    maxedLeaves = False
+    LeafPercent = 0
     drowning = False
     isDistress = False
     # Define the minimum confidence threshold
@@ -18,9 +18,9 @@ def filterclasses(classes,confidence):
     leaf_count = filtered_classes.count(object_of_interest)
 
     if leaf_count >= 3:
-        maxedLeaves = True
+        LeafPercent = 1
     else :
-        maxedLeaves = False
+        LeafPercent = 0
 
     for c in filtered_classes:
         if c == 0:
@@ -28,4 +28,4 @@ def filterclasses(classes,confidence):
         elif c == 3:
             isDistress = True
 
-    return maxedLeaves,drowning,isDistress
+    return LeafPercent,drowning,isDistress

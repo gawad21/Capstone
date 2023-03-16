@@ -50,9 +50,16 @@ nav a {
 }
 .settings-button {
   text-decoration: none;
+  font-size: 16px;
+  color: #444;
+  padding: 8px 20px;
+  padding: 0;
+  border: none;
+  background: none;
 }
 .settings-button:hover {
   text-decoration: underline;
+  color: #444;
 }
 
 button {
@@ -76,8 +83,8 @@ button {
 .main-body {
   padding-top: 100px;
   display: grid;
-  grid-template-columns: 400px 200px;
-  grid-template-rows: 1fr 200px;
+  grid-template-columns: 450px 250px;
+  grid-template-rows: 1fr 275px;
   justify-content: center;
 }
 

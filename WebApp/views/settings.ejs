@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel='stylesheet' href='/stylesheets/settings.css' />
-   <!-- <meta http-equiv="refresh" content="10"> -->
+    <link rel="stylesheet" href="/stylesheets/settings.css" />
+    <!-- <meta http-equiv="refresh" content="10"> -->
     <title>Settings</title>
   </head>
   <body>
@@ -13,102 +13,140 @@
       <h1>Aquaspecta</h1>
       <div class="left-header">
         <nav>
-          <a href="/dashboard" class=""><button>Back to dashboard</button></a>
+          <ion-icon
+            class="back-icon"
+            name="arrow-back-circle-outline"
+          ></ion-icon>
+          <a href="/dashboard"
+            ><button class="button-dashboard">Back to dashboard</button></a
+          >
         </nav>
-        <a href="/"><button class="logout">Logout</button></a>
-      
+        <a href="/"><button class="logout, button-logout">Logout</button></a>
       </div>
     </header>
-    <p>
-      This page will be designed better later, everything is just here as
-      placeholders for now.
-    </p>
+    <div class="blank-space2"></div>
+    <div class="settings-bar">
+      <a href="#goto-notifications" class="settings-bar-anchors"
+        >Notifications</a
+      >
+      <a href="#goto-alarm" class="settings-bar-anchors">Alarm</a>
+      <a href="#goto-account-information" class="settings-bar-anchors"
+      >Account Information</a
+    >
+    </div>
+    <div class="blank-space"></div>
     <div class="main-body">
-      <div class="settings-navigation">
-        <p>Account information</p>
-        <p>Notifications</p>
-        <p>Alarm</p>
-        <p>Video</p>
-      </div>
+      <span class="anchor" id="goto-notifications"></span>
       <div class="settings-content">
-        <p>Username: <%=username%></p>
-        <p>Password: *****</p>
-        <button class="button-password-change">Change Password</button>
+        <p class="title">Notifications</p>
         <div class="notification-on-off">
-          <p>Notification for leaves: </p>
+          <p class="move-left">Notification for leaves:</p>
           <div class="on-off">
-          <% if(leaves){ %>
+            <% if(leaves){ %>
             <form action="/dashboard/settings/leaf" method="POST">
-            <p>ON 
-            <button class="on-off" id="button-leaves">Turn OFF</button>
-            </p>
+              <p>
+                ON
+                <button class="on-off" id="button-leaves">Turn OFF</button>
+              </p>
             </form>
-          <% } else { %>
+            <% } else { %>
             <form action="/dashboard/settings/leaf" method="POST">
-            <p>OFF 
-            <button class="on-off" id="button-leaves">Turn ON</button>
-            </p>
+              <p>
+                OFF
+                <button class="on-off" id="button-leaves">Turn ON</button>
+              </p>
             </form>
-          <% } %>
+            <% } %>
           </div>
         </div>
         <div class="notification-on-off">
-          <p>Notification for distress:</p>
+          <p class="move-left">Notification for distress:</p>
           <div class="on-off">
             <% if(distress){ %>
-              <form action="/dashboard/settings/distress" method="POST">
-              <p>ON 
-              <button class="on-off" id="button-distress">Turn OFF</button>
+            <form action="/dashboard/settings/distress" method="POST">
+              <p>
+                ON
+                <button class="on-off" id="button-distress">Turn OFF</button>
               </p>
-              </form>
+            </form>
             <% } else { %>
-              <form action="/dashboard/settings/distress" method="POST">
-              <p>OFF 
-              <button class="on-off" id="button-distress">Turn ON</button>
+            <form action="/dashboard/settings/distress" method="POST">
+              <p>
+                OFF
+                <button class="on-off" id="button-distress">Turn ON</button>
               </p>
-              </form>
+            </form>
             <% } %>
           </div>
         </div>
         <div class="notification-on-off">
-          <p>Notification for drowning:</p>
+          <p class="move-left">Notification for drowning:</p>
           <div class="on-off">
             <% if(drowning){ %>
-              <form action="/dashboard/settings/drown" method="POST">
-              <p>ON 
-              <button class="on-off" id="button-drown">Turn OFF</button>
+            <form action="/dashboard/settings/drown" method="POST">
+              <p>
+                ON
+                <button class="on-off" id="button-drown">Turn OFF</button>
               </p>
-              </form>
+            </form>
             <% } else { %>
-              <form action="/dashboard/settings/drown" method="POST">
-              <p>OFF 
-              <button class="on-off" id="button-drown">Turn ON</button>
+            <form action="/dashboard/settings/drown" method="POST">
+              <p>
+                OFF
+                <button class="on-off" id="button-drown">Turn ON</button>
               </p>
-              </form>
+            </form>
             <% } %>
           </div>
         </div>
+        <span class="anchor" id="goto-alarm"></span>
+        <p class="title">Alarm</p>
+
         <div class="notification-on-off">
-          <p>Alarm Sound:</p>
+          <p class="move-left">Alarm Sound:</p>
           <div class="on-off">
             <% if(alarm){ %>
-              <form action="/dashboard/settings/alarm" method="POST">
-              <p>Enabled 
-              <button class="on-off" id="button-alarm">Disable</button>
+            <form action="/dashboard/settings/alarm" method="POST">
+              <p>
+                Enabled
+                <button class="on-off" id="button-alarm">Disable</button>
               </p>
-              </form>
+            </form>
             <% } else { %>
-              <form action="/dashboard/settings/alarm" method="POST">
-              <p>Disabled 
-              <button class="on-off" id="button-alarm">Enable</button>
+            <form action="/dashboard/settings/alarm" method="POST">
+              <p>
+                Disabled
+                <button class="on-off" id="button-alarm">Enable</button>
               </p>
-              </form>
+            </form>
             <% } %>
           </div>
         </div>
-        <p>Store 24hrs of video footage</p>
-        <p>Delete account and data</p>
+        <span class="anchor" id="goto-account-information"></span>
+        <p class="title">Account Information</p>
+        <p class="move-left">Username: <%=username%></p>
+        <p class="move-left">Name: Aqua Specta</p>
+        <p class="move-left">Phone: (123) 456-7890</p>
+        <p class="move-left">Email: aquaspecta@gmail.com</p>
+        <p class="move-left">Password: *******</p>
+        <button class="button-password move-left">Change Password</button>
+        <span class="anchor" id="goto-notifications"></span>
+
+        <button class="button-delete-account">
+          Delete Account and Erase All Data
+        </button>
+      </div>
+      <div class="footer">
+        here is my footer, place holder for now, will fill it in this weekend
       </div>
     </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

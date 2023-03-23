@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel='stylesheet' href='/stylesheets/landing.css' />
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="stylesheet" href="/stylesheets/landing.css" />
     <title>Aquaspecta</title>
   </head>
   <body>
@@ -12,33 +13,312 @@
       <header>
         <div class="left-header">
           <h1>Aquaspecta</h1>
-
           <nav>
-            <a href="#first-grid" class="">Buy Now</a>
-            <a href="#second-grid">How it works</a>
-            <a href="#third-grid">Features</a>
+            <a href="#goto-buy-now" class="button-nav">Buy Now</a>
+            <a href="#goto-features" class="button-nav">Features</a>
+            <a href="#goto-how-it-works" class="button-nav">How it works</a>
+            <a href="#goto-plans" class="button-nav">Plans</a>
+            <a href="#goto-about-us" class="button-nav">About us</a>
           </nav>
         </div>
-        <button class="login" type="button" id="sign-in">Sign in</button> 
+        <button class="login button-login" type="button" id="sign-in">
+          Sign in
+        </button>
       </header>
-      <div class="first-grid" id="first-grid">
-        Slogan on swimming safety
-        <img src="/images/photo1.jpg" width="100" height="auto" />
-      </div>
-      <div class="second-grid" id="second-grid">
-        <img src="/images/photo2.jpg" width="100" height="auto" />
-        How our product works
-      </div>
-      <div class="third-grid" id="third-grid">
-        Slogan on swimming safety
-        <img src="/images/photo1.jpg" width="100" height="auto" />
+      <span class="anchor1" id="goto-buy-now"></span>
+
+      <div class="container">
+        <div class="old-header">
+          <div class="header-text-box">
+            <h1 class="slogan">
+              We design intelligent safety, for your peace of mind
+            </h1>
+            <p class="header-text">
+              At the university in the heart of Ottawa, we spend our days
+              relentlessly perfecting pool safety. The result is a perfect blend
+              of safety and affordability, that will have a lasting impact on
+              your safety and pool health.
+            </p>
+            <a class="btn btn--big" href="#">Buy now</a>
+          </div>
+          <img src="/images/camera2.jpg" alt="Photo" />
+        </div>
+        <span class="anchor1" id="goto-features"></span>
+
+        <section>
+          <h2>What makes Aquaspecta special</h2>
+          <div class="grid-3-cols">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="#0c8599"
+                viewBox="0 0 256 256"
+                class="features-icon"
+              >
+                <path
+                  d="M192,116a12,12,0,1,1-12-12A12,12,0,0,1,192,116ZM152,64H112a8,8,0,0,0,0,16h40a8,8,0,0,0,0-16Zm96,48v32a24,24,0,0,1-24,24h-2.36l-16.21,45.38A16,16,0,0,1,190.36,224H177.64a16,16,0,0,1-15.07-10.62L160.65,208h-57.3l-1.92,5.38A16,16,0,0,1,86.36,224H73.64a16,16,0,0,1-15.07-10.62L46,178.22a87.69,87.69,0,0,1-21.44-48.38A16,16,0,0,0,16,144a8,8,0,0,1-16,0,32,32,0,0,1,24.28-31A88.12,88.12,0,0,1,112,32H216a8,8,0,0,1,0,16H194.61a87.93,87.93,0,0,1,30.17,37c.43,1,.85,2,1.25,3A24,24,0,0,1,248,112Zm-16,0a8,8,0,0,0-8-8h-3.66a8,8,0,0,1-7.64-5.6A71.9,71.9,0,0,0,144,48H112A72,72,0,0,0,58.91,168.64a8,8,0,0,1,1.64,2.71L73.64,208H86.36l3.82-10.69A8,8,0,0,1,97.71,192h68.58a8,8,0,0,1,7.53,5.31L177.64,208h12.72l18.11-50.69A8,8,0,0,1,216,152h8a8,8,0,0,0,8-8Z"
+                ></path>
+              </svg>
+              <p class="features-title"><strong>Affordable</strong></p>
+              <p class="features-text">
+                Aquaspecta helps prevent expensive maintenance mistakes that
+                could cause damage to your pool.
+              </p>
+            </div>
+
+            <div>
+              <i class="ph ph-smiley features-icon"></i>
+
+              <p class="features-title">
+                <strong>Safe</strong>
+              </p>
+              <p class="features-text">
+                Aquaspecta can monitor your pool when you aren’t around and keep
+                your loved ones safe.
+              </p>
+            </div>
+
+            <div>
+              <i class="ph ph-sun features-icon"></i>
+              <p class="features-title">
+                <strong>Sustainable</strong>
+              </p>
+              <p class="features-text">
+                Aquaspecta tracks the build up of debris in the pool and can
+                notify you when it is time to clean.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="testimonial-section">
+          <div class="grid-3-cols">
+            <img
+              src="/images/person1.jpg"
+              alt="People sitting on chairs"
+            />
+            <div class="testimonial-box">
+              <h2>"I couldn't live without these cameras"</h2>
+              <blockquote class="testimonial-text">
+                This product has changed my life! I can now leave the house with
+                the peace of mind of knowing I can monitor my pool from wherever
+                I am, 24/7. I recommend this for all pool owners!
+              </blockquote>
+              <p class="testimonial-author">&mdash; Jane Doe</p>
+            </div>
+          </div>
+        </section>
+        <span class="anchor1" id="goto-how-it-works"></span>
+
+        <div class="how-it-works">
+          <div class="header-text-box">
+            <h1 class="slogan">How It Works</h1>
+            <p class="header-text">
+              This product includes a camera that will be installed near your
+              pool and will run off an internal microcontroller. The product is
+              also paired with a web app where you can view the status of your
+              pool and receive notifications when an issue arises.
+            </p>
+            <p class="header-text">
+              The system will actively monitor your pool and using computer
+              vision it will have the ability to detect drownings, stress
+              signals, and even the buildup of leaves on the pool surface, by
+              sending an alert through the web app. When this alert goes off,
+              the goal of the project is for the potential drowning victim to
+              receive help as soon as possible to prevent injury or death.
+            </p>
+          </div>
+        </div>
+        <span class="anchor1" id="goto-plans"></span>
+
+        <section>
+          <h2>Our bestselling plans</h2>
+          <div class="grid-3-cols">
+            <figure class="chair">
+              <img src="/images/basic1.jpg" alt="Chair" />
+              <div class="chair-box">
+                <h3>Aquaspecta Basic</h3>
+                <ul class="chair-details">
+                  <li>
+                    <i class="ph ph-video-camera plans-icon"></i>
+                    <!-- Span is a generic INLINE text element, it doesn't have any meaning. It's like a div element, but inline -->
+                    <span>One camera</span>
+                  </li>
+                  <li>
+                    <i class="ph ph-clock plans-icon"></i>
+                    <span>24 hour video history</span>
+                  </li>
+                  <li>
+                    <i class="ph ph-monitor-play plans-icon"></i>
+                    <span>Real-time video feed</span>
+                  </li>
+                  <li>
+                    <i class="ph ph-browsers plans-icon"></i>
+
+                    <span>Access to web app</span>
+                  </li>
+                </ul>
+                <div class="chair-price">
+                  <strong>$8/month</strong>
+                  <a href="#" class="btn btn--small">Subscribe</a>
+                </div>
+              </div>
+            </figure>
+
+            <figure class="chair">
+              <img src="/images/plus1.jpg" alt="Chair" />
+              <div class="chair-box">
+                <h3>Aquaspecta Plus</h3>
+                <ul class="chair-details">
+                  <li>
+                    <i class="ph ph-video-camera plans-icon"></i>
+
+                    <span>Two cameras</span>
+                  </li>
+                  <li>
+                    <i class="ph ph-clock plans-icon"></i>
+                    <span>1 week video history</span>
+                  </li>
+                  <li>
+                    <i class="ph ph-monitor-play plans-icon"></i>
+
+                    <span>Real-time video feed</span>
+                  </li>
+                  <li>
+                    <i class="ph ph-browsers plans-icon"></i>
+                    <span>Access to web app</span>
+                  </li>
+                </ul>
+                <div class="chair-price">
+                  <strong>$12/month</strong>
+                  <a href="#" class="btn btn--small">Subscribe</a>
+                </div>
+              </div>
+            </figure>
+
+            <figure class="chair">
+              <img src="/images/max1.jpg" alt="Chair" />
+              <div class="chair-box">
+                <h3>Aquaspecta Max</h3>
+                <ul class="chair-details">
+                  <li>
+                    <i class="ph ph-video-camera plans-icon"></i>
+
+                    <span>Unlimited cameras</span>
+                  </li>
+                  <li>
+                    <i class="ph ph-clock plans-icon"></i>
+
+                    <span>30 day video history</span>
+                  </li>
+                  <li>
+                    <i class="ph ph-monitor-play plans-icon"></i>
+
+                    <span>Real-time video feed</span>
+                  </li>
+                  <li>
+                    <i class="ph ph-browsers plans-icon"></i>
+                    <span>Access to web app</span>
+                  </li>
+                </ul>
+                <div class="chair-price">
+                  <strong>$20/month</strong>
+                  <a href="#" class="btn btn--small">Subscribe</a>
+                </div>
+              </div>
+            </figure>
+          </div>
+        </section>
+        <span class="anchor3" id="goto-about-us"></span>
+
+        <div class="about-us">
+          <div class="header-text-box">
+            <h1 class="slogan">About Us</h1>
+            <p class="header-text">
+              We are 5 students studying electrical engineering at the
+              University of Ottawa located in Canada. Before this project most
+              of us have never collaborated and we come from many different
+              backgrounds, lifestyles, races, religions, genders, and social
+              experiences. However, we came together to design this system that
+              will help many pool owners with a variety of issues. We have all
+              studied electrical engineering for several years with specialties
+              ranging from microwaves and photonics to power and sustainable
+              energy. This product was designed as the final project during our
+              studies in becoming an engineer.
+            </p>
+            <p class="header-text">
+              This project uses many different concepts and skills that were
+              developed while studying at the University of Ottawa. When
+              deciding on a topic for our project, we found that drownings are a
+              leading cause of injury related death for children in Canada. Upon
+              learning this, as a group we decided we would develop a product to
+              combat this issue. After spending time brainstorming, we decided
+              to focus on a way to detect drownings in private swimming pools as
+              well as ways to lower the cost of maintaining a pool.
+            </p>
+          </div>
+          <img src="/images/aboutus1.jpg" alt="Photo" />
+        </div>
+
+        <footer>
+          <div>
+            <p class="footer-title">Navigation</p>
+            <p>
+              <a href="#goto-buy-now" class="button-nav">Buy Now</a>
+            </p>
+            <p>
+              <a href="#goto-features" class="button-nav">Features</a>
+            </p>
+            <p>
+              <a href="#goto-how-it-works" class="button-nav">How it works</a>
+            </p>
+            <p>
+              <a href="#goto-plans" class="button-nav">Plans</a>
+            </p>
+            <p>
+              <a href="#goto-about-us" class="button-nav">About us</a>
+            </p>
+            <p class="footer-title">Product</p>
+            <p>Delivery options</p>
+            <p>Tracking a package</p>
+            <p>Help Centre</p>
+          </div>
+          <div>
+            <p class="footer-title">Who We Are</p>
+            <p>Fatemeh Mousavi Karimi</p>
+            <p>Veronique Gagne</p>
+            <p>Brent Menzies</p>
+            <p>Gouled Awad</p>
+            <p>Sam Gilmore</p>
+            <p class="footer-title">Environmental</p>
+            <p>Device recycling</p>
+            <p>Sustainability</p>
+          </div>
+          <div>
+            <p class="footer-title">Contact Us</p>
+            <p>aquaspecta@gmail.com</p>
+            <p>(123)-456-7890</p>
+            <p>75 Laurier Ave E, Ottawa,</p>
+            <p>ON K1N 6N5</p>
+            <p class="footer-title">Other</p>
+            <p>Privacy Policy</p>
+            <p>Security</p>
+            <p>Accessibility Hub</p>
+          </div>
+        </footer>
+        <div class="copyright">
+          Copyright &copy; 2027 by Aquaspecta. Part of "School of Electrical
+          Engineering and Computer Science" at the University of Ottawa. Use for
+          learning purposes only.
+        </div>
       </div>
     </div>
   </body>
 
   <script>
-    const btn = document.getElementById('sign-in')
-    btn.onclick = ()=> location.assign('/login')
+    const btn = document.getElementById("sign-in");
+    btn.onclick = () => location.assign("/login");
   </script>
-
 </html>
